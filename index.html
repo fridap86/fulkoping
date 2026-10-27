@@ -7,50 +7,116 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="wrapper">
 
-  <div class="wrapper">
-
-    <div class="header">
+    <header class="header">
       <h1>Fulköpings bokmässa</h1>
       <p>Beställning av specialkost till konferens</p>
-    </div>
+    </header>
 
-    <div class="order-form">
+
+    <form class="order-form" id="orderForm" novalidate>
+
+      <p class="form-intro">
+        Fyll i uppgifterna nedan för att beställa vegetarisk och vegansk mat.
+      </p>
 
       <div class="form-field">
-        <label for="participants">Antal deltagare</label>
-        <input type="text" id="participants" name="participants">
+        <label for="participants">Antal deltagare *</label>
+        <input
+          type="number"
+          id="participants"
+          name="participants"
+          min="0"
+          step="1"
+          required
+          aria-describedby="participants-help"
+        >
+        <small id="participants-help">
+          Ange totalt antal deltagare som ett heltal, 0 eller större.
+        </small>
       </div>
 
       <div class="form-field">
-        <label for="vegetarian">Antal vegetariska portioner</label>
-        <input type="text" id="vegetarian" name="vegetarian">
+        <label for="vegetarian">Antal vegetariska portioner *</label>
+        <input
+          type="number"
+          id="vegetarian"
+          name="vegetarian"
+          min="0"
+          step="1"
+          required
+          aria-describedby="vegetarian-help"
+        >
+        <small id="vegetarian-help">
+          Ange antal portioner som ett heltal, 0 eller större.
+        </small>
       </div>
 
       <div class="form-field">
-        <label for="vegan">Antal veganportioner</label>
-        <input type="text" id="vegan" name="vegan">
+        <label for="vegan">Antal veganportioner *</label>
+        <input
+          type="number"
+          id="vegan"
+          name="vegan"
+          min="0"
+          step="1"
+          required
+          aria-describedby="vegan-help"
+        >
+        <small id="vegan-help">
+          Ange antal portioner som ett heltal, 0 eller större.
+        </small>
       </div>
 
-      <div class="form-field">
-        <label for="deliveryDate">Leveransdatum</label>
-        <input type="date" id="deliveryDate" name="deliveryDate">
-      </div>
+      <fieldset class="date-section">
+        <legend>Datum för konferensen</legend>
 
-      <div class="form-field">
-        <label for="conferenceDate">Konferensdatum</label>
-        <input type="date" id="conferenceDate" name="conferenceDate">
-      </div>
+        <div class="form-field">
+          <label for="conferenceDate">Konferensdatum *</label>
+          <input
+            type="date"
+            id="conferenceDate"
+            name="conferenceDate"
+            required
+            aria-describedby="conferenceDate-help"
+          >
+          <small id="conferenceDate-help">
+            Välj ett datum i framtiden.
+          </small>
+        </div>
+
+        <div class="form-field">
+          <label for="deliveryDate">Leveransdatum *</label>
+          <input
+            type="date"
+            id="deliveryDate"
+            name="deliveryDate"
+            required
+            aria-describedby="deliveryDate-help"
+          >
+          <small id="deliveryDate-help">
+            Välj konferensdagen eller dagen före konferensen.
+          </small>
+        </div>
+      </fieldset>
+
+      <div
+        class="messages"
+        id="messages"
+        role="alert"
+        aria-live="assertive"
+      ></div>
 
       <div class="form-actions">
-        <button type="button" id="submitBtn">Skicka beställning</button>
+        <button type="submit" id="submitBtn">
+          Skicka beställning
+        </button>
       </div>
 
-      <div class="messages" id="messages"></div>
+    </form>
 
-    </div>
-
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
