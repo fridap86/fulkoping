@@ -79,11 +79,12 @@
             id="conferenceDate"
             name="conferenceDate"
             required
-            aria-describedby="conferenceDate-help"
+            aria-describedby="conferenceDate-help conferenceDate-error"
           >
           <small id="conferenceDate-help">
             Välj ett datum i framtiden.
           </small>
+          <p id="conferenceDate-error" class="field-error" aria-live="polite"></p>
         </div>
 
         <div class="form-field">
@@ -93,11 +94,12 @@
             id="deliveryDate"
             name="deliveryDate"
             required
-            aria-describedby="deliveryDate-help"
+            aria-describedby="deliveryDate-help deliveryDate-error"
           >
           <small id="deliveryDate-help">
             Välj konferensdagen eller dagen före konferensen.
           </small>
+        	<p id="deliveryDate-error" class="field-error" aria-live="polite"></p>
         </div>
       </fieldset>
 

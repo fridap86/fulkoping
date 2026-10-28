@@ -4,7 +4,7 @@ Stella Jakobsson \
 Frida Persson \
 Amal Hirsi \
 \
-\
+
 ## Motivering till tillgänglighetsanpassning
 \
 Vi har förbättrat formulärets tillgänglighet genom att öka textkontrasten, lägga till tydliga fokusmarkeringar och gruppera datumfälten under en gemensam rubrik. Hjälptexter förklarar hur fälten ska fyllas i och vilka regler som gäller. Vi har även planerat tydliga felmeddelanden som beskriver vad som är fel och hur användaren kan rätta till det. Felen ska markeras både med text och visuell återkoppling, så att de inte enbart identifieras genom färg.\

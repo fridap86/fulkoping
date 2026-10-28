@@ -139,6 +139,54 @@ body {
   outline-offset: 3px;
 }
 
+
+/* Röd ram runt felaktigt fält */
+.form-field input[aria-invalid="true"] {
+  border: 2px solid #9b1c1c;
+  }
+ 
+  /*Utseende för felmeddelanden */
+.messages p {
+  color:#9b1c1c;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+ 
+/* Visar en ruta när det finns felmeddelanden */
+.messages:not(:empty) {
+  background-color: #fff0f0;
+  border: 1px solid #9b1c1c;
+  border-radius: 6px;
+  padding: 1rem;
+  Box-shadow: 0 3px 8px rgba(155, 28, 28, 0.15);
+}
+ 
+/* Tar bort extra utrymme under sista felmeddelandet */
+.messages p:last-child {
+  margin-bottom: 0;
+}
+ 
+/* Döljer tomma felrutor */
+.field-error:empty {
+  display: none;
+}
+ 
+/* Röd text och ljusröd ruta med skugga */
+.field-error:not(:empty) {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  color: #9b1c1c;
+  background-color: #fff0f0;
+  border: 1px solid #9b1c1c;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(155, 28, 28, 0.15);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 /* Anpassning för små skärmar */
 @media (max-width: 420px) {
   body {
